@@ -10,7 +10,11 @@ public interface UsersService {
 	
 	public List<Users> getUser();
 	
-	public void SendNotificationEmail(Users user);
+	public void notificationModeEmail(Users user);
+	
+	public void notificationModeMessage(Users user);
+	
+	public void notificationModeCall(Users user);
 	
 }
 

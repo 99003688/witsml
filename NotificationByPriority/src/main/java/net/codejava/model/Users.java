@@ -26,26 +26,37 @@ public class Users {
 	
 	@Column(name = "mobile", nullable = false, length = 20)
 	private String mobile;
+	@Column(name = "mobile", nullable = false, length = 20)
+	private boolean sendEmail ;
+	@Column(name = "mobile", nullable = false, length = 20)
+	private boolean call;
 	
-	private boolean sendViaEmail ;
 	
-	public boolean isSendViaEmail() {
-		return sendViaEmail;
+	public boolean isCall() {
+		return call;
 	}
 
-	public void setSendViaEmail(boolean sendViaEmail) {
-		this.sendViaEmail = sendViaEmail;
+	public void setCall(boolean call) {
+		this.call = call;
+	}
+
+	public boolean isSendEmail() {
+		return sendEmail;
+	}
+
+	public void setSendEmail(boolean sendEmail) {
+		this.sendEmail = sendEmail;
 	}
 
 	public boolean isSendViaMessage() {
-		return sendViaMessage;
+		return sendMessage;
 	}
 
-	public void setSendViaMessage(boolean sendViaMessage) {
-		this.sendViaMessage = sendViaMessage;
+	public void setSendMessage(boolean sendMessage) {
+		this.sendMessage = sendMessage;
 	}
 
-	private  boolean sendViaMessage ;
+	private  boolean sendMessage ;
 
 	public Long getId() {
 		return id;

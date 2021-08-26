@@ -22,13 +22,19 @@ public class AppController {
 	@PostMapping("/adduser")
 	public Users addUser(@RequestBody Users u)
 	{
-		if(u.isSendViaEmail()) {
+		if(u.isSendEmail()) {
 			System.out.println("email logged in");
-			us.SendNotificationEmail(u);
+			us.notificationModeEmail(u);
 			
 		}
 		if(u.isSendViaMessage()) {
 			System.out.println("text logged in");
+			us.notificationModeMessage(u);
+		}
+		if(u.isCall()) {
+			System.out.println("calling the user");
+			us.notificationModeCall(u);
+			
 		}
 		
 		return this.us.addUser(u);

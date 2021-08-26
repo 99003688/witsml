@@ -38,7 +38,7 @@ public class UsersImpl implements UsersService{
 	    private JavaMailSender mailSender;
 
 	@Override
-	public void  SendNotificationEmail(Users user) {
+	public void  notificationModeEmail(Users user) {
 	
 		    try {
 			    String toAddress = user.getEmail();
@@ -70,6 +70,20 @@ public class UsersImpl implements UsersService{
 		    }
 		
 	
+	}
+
+	
+
+	@Override
+	public void notificationModeMessage(Users user) {
+		// TODO Auto-generated method stub
+		System.out.println("message sent");
+	}
+
+	@Override
+	public void notificationModeCall(Users user) {
+		// TODO Auto-generated method stub
+		System.out.println("calling user");
 	}
 
 }
